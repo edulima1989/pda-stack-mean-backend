@@ -30,6 +30,8 @@ const empleado = new EmployeeController(new MongoEmployeeRepository());
  */
 router.get('/empleados', empleado.getAllEmpleados.bind(empleado));
 
+router.get('/employees', empleado.getAllEmpleados.bind(empleado));
+
 /**
  * @openapi
  * /api/v1/empleados/{id}:
