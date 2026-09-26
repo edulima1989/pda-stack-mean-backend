@@ -1,7 +1,7 @@
-import type { EmployeeRepositoryInterface } from './employee.repository.interface.js';
+import type { IEmployeeRepository } from './employee.repository.interface.js';
 import EmployeeModel from '../models/empleado.js';
 
-export class MongoEmployeeRepository implements EmployeeRepositoryInterface {
+export class MongoEmployeeRepository implements IEmployeeRepository {
     async createEmployee(employeeData: any): Promise<any> {
         const employee = new EmployeeModel(employeeData);
         await employee.save();

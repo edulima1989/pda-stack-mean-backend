@@ -3,7 +3,7 @@ import { z } from 'zod';
 
 type ValidationSchemas = {
     body?: z.ZodType;
-    params?: z.ZodType;
+    params?: z.ZodType<Record<string, string>>;
 };
 
 export const validate = (schemas: ValidationSchemas): RequestHandler => {
